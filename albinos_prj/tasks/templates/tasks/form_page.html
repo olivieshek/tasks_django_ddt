@@ -1,0 +1,16 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}
+    Form Page
+{% endblock %}
+
+{% block content %}
+<h1>Add your task!</h1>
+<form action="{% url 'tasks:add' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit">
+</form>
+<a href="{% url 'tasks:index' %}">Просмотреть список задач</a>
+<a href="{% url 'tasks:main' %}">На главную</a>
+{% endblock %}

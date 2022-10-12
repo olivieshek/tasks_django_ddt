@@ -1,0 +1,21 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block content %}
+<h1>Tasks App</h1>
+<h2>Список задач</h2>
+<ol>
+    {% if tasks %}
+        {% for task in tasks %}
+            <li>{{ task }}</li>
+        {% endfor %}
+    {% else %}
+        <p>У вас нет задач.</p>
+    {% endif %}
+</ol>
+<a href="{% url 'tasks:add' %}">Пополнить список</a>
+<a href="{% url 'tasks:main' %}">На главную</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "tasks/base.html" %}
+
+{% block title %}
+    Main Page
+{% endblock %}
+
+{% block content %}
+<h1>Main Page</h1>
+<a href="{% url 'tasks:index' %}">Просмотреть список задач</a>
+<a href="{% url 'tasks:add' %}">Добавить задачу</a>
+{% endblock %}

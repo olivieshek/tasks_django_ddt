@@ -1,0 +1,16 @@
+{% extends "rocket_app/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+{% if is_new_year %}
+<div class="container">
+    <p>НЕТ</p>
+</div>
+{% else %}
+<div class="container">
+    <p>ДА</p>
+</div>
+{% endblock %}
