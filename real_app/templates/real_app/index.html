@@ -1,0 +1,11 @@
+{% extends "real_app/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<a href="{% url 'real_app:form_page' %}">Решить пример деления</a>
+<a href="{% url 'real_app:history' %}">Посмотреть историю вычислений</a>
+{% endblock %}

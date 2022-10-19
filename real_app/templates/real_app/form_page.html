@@ -1,0 +1,15 @@
+{% extends "real_app/base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h1>Welcome to Real App.</h1>
+<form action="{% url 'real_app:form_page' %}" method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="лееес гоооу">
+</form>
+<a href="{% url 'real_app:index' %}">Назад</a>
+{% endblock %}
